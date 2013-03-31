@@ -1,11 +1,11 @@
 Summary:	GNOME Power Manager
 Name:		gnome-power-manager
-Version:	3.6.0
+Version:	3.8.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.6/%{name}-%{version}.tar.xz
-# Source0-md5:	3bc0f6bf7040d3f4916def26359f20ee
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.8/%{name}-%{version}.tar.xz
+# Source0-md5:	0c07b0dd2f576ab6624f9cc9d5228abe
 URL:		http://www.gnome.org/projects/gnome-power-manager/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -72,7 +72,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/gnome-power-statistics
 %{_datadir}/glib-2.0/schemas/*.xml
-%{_datadir}/gnome-power-manager
 %{_desktopdir}/gnome-power-statistics.desktop
 %{_iconsdir}/hicolor/*/*/*
 
