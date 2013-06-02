@@ -1,11 +1,11 @@
 Summary:	GNOME Power Manager
 Name:		gnome-power-manager
-Version:	3.8.0
+Version:	3.8.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	0c07b0dd2f576ab6624f9cc9d5228abe
+# Source0-md5:	f6d16edbb5e539a9ba3e66d63e4799d0
 URL:		http://www.gnome.org/projects/gnome-power-manager/
 BuildRequires:	autoconf
 BuildRequires:	automake
