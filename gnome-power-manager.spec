@@ -1,17 +1,17 @@
-Summary:	GNOME Power Manager
+Summary:	GNOME power manager
 Name:		gnome-power-manager
-Version:	3.8.2
+Version:	3.10.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	f6d16edbb5e539a9ba3e66d63e4799d0
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.10/%{name}-%{version}.tar.xz
+# Source0-md5:	c3a6a14fe5a98cf8060dd2288f83699a
 URL:		http://www.gnome.org/projects/gnome-power-manager/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
 BuildRequires:	gnome-doc-utils
-BuildRequires:	gtk+3-devel
+BuildRequires:	gtk+3-devel >= 3.10.0
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	upower-devel
@@ -22,13 +22,13 @@ Requires:	upower
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GNOME |Power Manager.
+GNOME power manager.
 
 %prep
 %setup -q
 
 # kill gnome common deps
-sed -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
+%{__sed} -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
     -i -e 's/GNOME_MAINTAINER_MODE_DEFINES//g'	\
     -i -e 's/GNOME_COMMON_INIT//g'		\
     -i -e 's/GNOME_CXX_WARNINGS.*//g'		\
