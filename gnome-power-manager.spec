@@ -1,24 +1,23 @@
 Summary:	GNOME power manager
 Name:		gnome-power-manager
-Version:	3.10.1
+Version:	3.12.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.10/%{name}-%{version}.tar.xz
-# Source0-md5:	7aa1d63d0abba3aacd994ff7ff184369
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.12/%{name}-%{version}.tar.xz
+# Source0-md5:	a465189ddbadaae944323a4ad8e23327
 URL:		http://www.gnome.org/projects/gnome-power-manager/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
-BuildRequires:	gnome-doc-utils
-BuildRequires:	gtk+3-devel >= 3.10.0
+BuildRequires:	gtk+3-devel >= 3.12.0
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	upower-devel
 Requires(post,postun):	/usr/bin/gtk-update-icon-cache
 Requires(post,postun):	glib-gio-gsettings
 Requires(post,postun):	hicolor-icon-theme
-Requires:	upower
+Requires:	upower >= 0.99.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,7 +35,6 @@ GNOME power manager.
 
 %build
 %{__intltoolize}
-%{__gnome_doc_prepare}
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoheader}
