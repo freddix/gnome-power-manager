@@ -1,7 +1,7 @@
 Summary:	GNOME power manager
 Name:		gnome-power-manager
 Version:	3.12.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-power-manager/3.12/%{name}-%{version}.tar.xz
@@ -13,7 +13,7 @@ BuildRequires:	dbus-glib-devel
 BuildRequires:	gtk+3-devel >= 3.12.0
 BuildRequires:	libtool
 BuildRequires:	pkg-config
-BuildRequires:	upower-devel
+BuildRequires:	upower-devel >= 0.99.0
 Requires(post,postun):	/usr/bin/gtk-update-icon-cache
 Requires(post,postun):	glib-gio-gsettings
 Requires(post,postun):	hicolor-icon-theme
